@@ -1,6 +1,8 @@
 ChangeLog
-DOMbo.pm
-MANIFEST
+lib/HTML/DOMbo.pm
 Makefile.PL
-test.pl
+MANIFEST			This list of files
+MANIFEST.SKIP
 README
+t/01_old_junk.t
+META.yml                                 Module meta-data (added by MakeMaker)

@@ -1,10 +1,10 @@
 
 require 5;
-# Time-stamp: "2000-11-03 22:33:43 MST"
+# Time-stamp: "2004-12-29 19:18:58 AST"
 package HTML::DOMbo;
 use strict;
 use vars qw($VERSION);
-$VERSION = 3.08;
+$VERSION = '3.09';
 
 use HTML::Element (); # just for sanity's sake
 use XML::DOM; # import all the nice constants
