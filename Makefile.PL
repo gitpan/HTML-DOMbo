@@ -1,24 +1,18 @@
-# This -*- perl -*- script writes the Makefile for Class::ISA
-# Time-stamp: "2004-12-29 19:18:45 AST"
-# See lib/ExtUtils/MakeMaker.pm for details of how to influence
-# the contents of the Makefile that is written.
+# This -*-perl-*- script writes the Makefile for installing this distribution.
+#
+# See "perldoc perlmodinstall" or "perldoc ExtUtils::MakeMaker" for
+# info on how to control how the installation goes.
+#
+#                                       Time-stamp: "2005-01-04 21:08:48 AST"
+
 require 5.004;
 use strict;
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    'NAME'	=> 'HTML::DOMbo',
+    'NAME'         => 'HTML::DOMbo',
     'VERSION_FROM' => 'lib/HTML/DOMbo.pm', # finds $VERSION
-    'dist'        => { COMPRESS => 'gzip -6f', SUFFIX => 'gz', },
+    'PREREQ_PM'    => { 'XML::DOM'=> '0', },
+
+    'dist'         => { COMPRESS => 'gzip -6f', SUFFIX => 'gz', },
 );
-
-package MY;
-
-sub libscan
-{ # Determine things that should *not* be installed
-    my($self, $path) = @_;
-    return '' if $path =~ m/~/;
-    $path;
-}
-
-__END__
